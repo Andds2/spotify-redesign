@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify (Redesign)</title>
+    <link href="./css/output.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/679fef9b4a.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/favicon/spotify.svg" type="image/x-icon">
+
+</head>
+<style>
+    *{
+        font-family: "Quicksand", sans-serif;
+    }
+</style>
+<body class="w-screen h-screen flex flex-col xl:flex-row">
+    <div class="bg-background-1 w-screen h-1/4 lg:h-2/5 xl:w-1/5 xl:h-screen flex flex-col static">
+        <div class="w-full h-2/4 lg:h-1/4 flex flex-row xl:flex-col">
+            <div class="w-1/4 h-full xl:w-full xl:h-2/5 flex flex-row justify-start items-center">
+                <img src="img/perfil.png" alt="" class="w-10 rounded-full xl:w-16 ml-2 border-solid border-2 border-white">
+                <h1 class="ml-2 text-2xl xl:text-3xl text-white">Luis</h1>
+            </div>
+            <div class="w-3/4 h-full xl:w-full xl:h-3/5 flex flex-row justify-evenly items-center">
+                <button class="w-8 h-8 text-sm xl:w-10 xl:h-10 xl:text-xl bg-background-2 ease-in duration-300 rounded-full text-white border-solid border-2 border-white hover:border-white"><i class="fa-solid fa-house"></i></button>
+                <button class="w-8 h-8 text-sm xl:w-10 xl:h-10 xl:text-xl bg-background-2 ease-in duration-300 rounded-full text-gray border-solid border-2 border-background-2 hover:border-white hover:text-white"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="w-8 h-8 text-sm xl:w-10 xl:h-10 xl:text-xl bg-background-2 ease-in duration-300 rounded-full text-gray border-solid border-2 border-background-2 hover:border-white hover:text-white"><i class="fa-solid fa-bell"></i></button>
+                <button class="w-8 h-8 text-sm xl:w-10 xl:h-10 xl:text-xl bg-background-2 ease-in duration-300 rounded-full text-gray border-solid border-2 border-background-2 hover:border-white hover:text-white"><i class="fa-solid fa-users"></i></button>
+                <button class="w-8 h-8 text-sm xl:w-10 xl:h-10 xl:text-xl bg-background-2 ease-in duration-300 rounded-full text-gray border-solid border-2 border-background-2 hover:border-white hover:text-white"><i class="fa-solid fa-gear"></i></button>
+            </div>
+        </div>
+        <div class="w-full h-2/4 lg:h-3/4 flex flex-row flex-wrap justify-evenly">
+            <div class="lg:h-1/12 w-full flex flex-row justify-between items-center">
+                <h1 class="text-white text-xl xl:text-2xl ml-2"> <i class="fa-solid fa-layer-group"></i> Biblioteca</h1>
+                <button class="text-white text-lg xl:text-xl mr-2"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="lg:h-11/12 w-full flex flex-row flex-wrap justify-evenly">
+                <div class="ease-in duration-300 w-12 h-12 2xl:w-40 2xl:h-48 2xl:p-1.5 xl:w-24 xl:h-32 rounded-lg flex flex-col 2xl:hover:bg-background-2" id="card-curtidas">
+                    <img src="img/curtidas.jpg" alt="" class="2xl:w-40 rounded-lg">
+                    <div class="flex flex-row justify-between items-center xl:visible invisible">
+                        <div class="flex flex-col">
+                            <h1 class="text-white text-sm">Curtidas</h1>
+                            <p class="text-gray text-xs">300 músicas</p>
+                        </div>
+                        <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs opacity-0 rounded-full text-background-1" id="btn-play"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="ease-in duration-300 w-12 h-12 2xl:w-40 2xl:h-48 2xl:p-1.5 xl:w-24 xl:h-32 rounded-lg flex flex-col 2xl:hover:bg-background-2" id="card-road">
+                    <img src="img/road trip.jpg" alt="" class="2xl:w-40 rounded-lg">
+                    <div class="flex flex-row justify-between items-center xl:visible invisible">
+                        <div class="flex flex-col">
+                            <h1 class="text-white text-sm">road trip</h1>
+                            <p class="text-gray text-xs">Luis <i class="fa-solid fa-user-tag text-green"></i> </p>
+                        </div>
+                        <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs opacity-0 rounded-full text-background-1" id="btn-play"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="ease-in duration-300 w-12 h-12 2xl:w-40 2xl:h-48 2xl:p-1.5 xl:w-24 xl:h-32 rounded-lg flex flex-col 2xl:hover:bg-background-2" id="card-rock">
+                    <img src="img/rock.jpg" alt="" class="2xl:w-40 rounded-lg">
+                    <div class="flex flex-row justify-between items-center xl:visible invisible">
+                        <div class="flex flex-col">
+                            <h1 class="text-white text-sm">rock</h1>
+                            <p class="text-gray text-xs">Luis <i class="fa-solid fa-user-tag text-green"></i> </p>
+                        </div>
+                        <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs opacity-0 rounded-full text-background-1" id="btn-play"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="ease-in duration-300 w-12 h-12 2xl:w-40 2xl:h-48 2xl:p-1.5 xl:w-24 xl:h-32 rounded-lg flex flex-col 2xl:hover:bg-background-2" id="card-emo">
+                    <img src="img/emo.jpg" alt="" class="2xl:w-40 rounded-lg">
+                    <div class="flex flex-row justify-between items-center xl:visible invisible">
+                        <div class="flex flex-col">
+                            <h1 class="text-white text-sm">emo</h1>
+                            <p class="text-gray text-xs">Luis <i class="fa-solid fa-user-tag text-green"></i> </p>
+                        </div>
+                        <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs opacity-0 rounded-full text-background-1" id="btn-play"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="ease-in duration-300 w-12 h-12 2xl:w-40 2xl:h-48 2xl:p-1.5 xl:w-24 xl:h-32 rounded-lg flex flex-col 2xl:hover:bg-background-2" id="card-indie">
+                    <img src="img/indie.jpg" alt="" class="2xl:w-40 rounded-lg">
+                    <div class="flex flex-row justify-between items-center xl:visible invisible">
+                        <div class="flex flex-col">
+                            <h1 class="text-white text-sm">indie</h1>
+                            <p class="text-gray text-xs">Luis <i class="fa-solid fa-user-tag text-green"></i> </p>
+                        </div>
+                        <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs opacity-0 rounded-full text-background-1" id="btn-play"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="ease-in duration-300 w-12 h-12 2xl:w-40 2xl:h-48 2xl:p-1.5 xl:w-24 xl:h-32 rounded-lg flex flex-col 2xl:hover:bg-background-2" id="card-lofi">
+                    <img src="img/lo fi.jpg" alt="" class="2xl:w-40 w-full rounded-lg">
+                    <div class="flex flex-row justify-between items-center xl:visible invisible">
+                        <div class="flex flex-col">
+                            <h1 class="text-white text-sm">lo fi</h1>
+                            <p class="text-gray text-xs">Luis <i class="fa-solid fa-user-tag text-green"></i> </p>
+                        </div>
+                        <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs opacity-0 rounded-full text-background-1" id="btn-play"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-background-1 w-screen h-3/4 xl:w-4/5 xl:h-screen flex flex-col items-center overflow-auto">
+        <div class="w-11/12 xl:h-1/3 flex flex-col xl:flex-row items-center justify-evenly">
+            <h1 class="text-white text-lg xl:hidden block">Artista mais tocado da semana</h1>
+            <img src="img/bmth.jpg" alt="bring me the horizon" class="w-36 xl:w-60 rounded-lg">
+            <div class="flex flex-col items-center w-full xl:w-1/2 xl:h-auto">
+                <h1 class="text-white text-lg xl:block hidden">Artista mais tocado da semana</h1>
+                <div class="flex flex-row w-full h-8 xl:h-10 items-end text-gray border-b border-gray">
+                    <div class="w-1/12 flex justify-center"><h1 class="text-sm">#</h1></div>
+                    <div class="w-4/12"><h1 class="text-sm">Titulo</h1></div>
+                    <div class="w-4/12"><h1 class="text-sm">Album</h1></div>
+                    <div class="w-1/12 flex justify-center"><h1 class="text-sm"><i class="fa-solid fa-clock"></i></h1></div>
+                    <div class="w-1/12 flex justify-center"><h1 class="text-sm"></h1></div>
+                    <div class="w-1/12 flex justify-center"><h1 class="text-sm"></h1></div>
+                </div>
+                <div class="ease-in duration-300 flex flex-row w-full h-8 items-center text-white hover:bg-background-2" id="tbody-music-1">
+                    <div class="w-1/12 flex justify-center text-xs" id="music_number">1</div>
+                    <div class="w-4/12"><h1 class="text-xs truncate">n/A</h1></div>
+                    <div class="w-4/12"><h1 class="text-xs truncate">POST HUMAN:NeX GEn</h1></div>
+                    <div class="w-1/12 flex justify-center"><h1 class="text-xs">3:12</h1></div>
+                    <div class="w-1/12 flex justify-center"><button class="text-xs"><i class="fa-solid fa-heart text-green"></i></button></div>
+                    <div class="w-1/12 flex justify-center"><button class="text-xs"><i class="fa-solid fa-ellipsis"></i></button></div>
+                </div>
+                <div class="ease-in duration-300 flex flex-row w-full h-8 items-center text-white hover:bg-background-2" id="tbody-music-2">
+                    <div class="w-1/12 flex justify-center text-xs" id="music_number">2</div>
+                    <div class="w-4/12"><h1 class="text-xs truncate">R.i.p(duskCOre RemIx)</h1></div>
+                    <div class="w-4/12"><h1 class="text-xs truncate">POST HUMAN:NeX GEn</h1></div>
+                    <div class="w-1/12 flex justify-center"><h1 class="text-xs">3:23</h1></div>
+                    <div class="w-1/12 flex justify-center"><button class="text-xs"><i class="fa-solid fa-heart text-green"></i></button></div>
+                    <div class="w-1/12 flex justify-center"><button class="text-xs"><i class="fa-solid fa-ellipsis"></i></button></div>
+                </div>
+                <div class="ease-in duration-300 flex flex-row w-full h-8 items-center text-white hover:bg-background-2" id="tbody-music-3">
+                    <div class="w-1/12 flex justify-center text-xs" id="music_number">3</div>
+                    <div class="w-4/12"><h1 class="text-xs truncate">Teardrops</h1></div>
+                    <div class="w-4/12"><h1 class="text-xs truncate">POST HUMAN:SURVIVAL HORROR</h1></div>
+                    <div class="w-1/12 flex justify-center"><h1 class="text-xs">3:35</h1></div>
+                    <div class="w-1/12 flex justify-center"><button class="text-xs"><i class="fa-solid fa-heart text-green"></i></button></div>
+                    <div class="w-1/12 flex justify-center"><button class="text-xs"><i class="fa-solid fa-ellipsis"></i></button></div>
+                </div>
+                <div class="ease-in duration-300 flex flex-row w-full h-8 items-center text-white hover:bg-background-2" id="tbody-music-4">
+                    <div class="w-1/12 flex justify-center text-xs" id="music_number">4</div>
+                    <div class="w-4/12"><h1 class="text-xs truncate">Deathbeds</h1></div>
+                    <div class="w-4/12"><h1 class="text-xs truncate">Sempiternal</h1></div>
+                    <div class="w-1/12 flex justify-center"><h1 class="text-xs">4:59</h1></div>
+                    <div class="w-1/12 flex justify-center"><button class="text-xs"><i class="fa-solid fa-heart text-green"></i></button></div>
+                    <div class="w-1/12 flex justify-center"><button class="text-xs"><i class="fa-solid fa-ellipsis"></i></button></div>
+                </div>
+                <div class="ease-in duration-300 flex flex-row w-full h-8 items-center text-white hover:bg-background-2" id="tbody-music-5">
+                    <div class="w-1/12 flex justify-center text-xs" id="music_number">5</div>
+                    <div class="w-4/12"><h1 class="text-xs truncate">Follow You</h1></div>
+                    <div class="w-4/12"><h1 class="text-xs truncate">That's The Spirit</h1></div>
+                    <div class="w-1/12 flex justify-center"><h1 class="text-xs">3:51</h1></div>
+                    <div class="w-1/12 flex justify-center"><button class="text-xs"><i class="fa-solid fa-heart text-green"></i></button></div>
+                    <div class="w-1/12 flex justify-center"><button class="text-xs"><i class="fa-solid fa-ellipsis"></i></button></div>
+                </div>
+            </div>
+        </div>
+        <div class="w-screen h-screen xl:w-11/12 xl:h-2/3 flex flex-col items-center justify-evenly">
+            <div class="xl:w-11/12 xl:h-1/4 w-full flex flex-col">
+                <div><h1 class="text-white text-base xl:text-xl"> <i class="fa-solid fa-clock-rotate-left"></i> Historico</h1></div>
+                <div class="flex flex-row justify-evenly w-full">
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="historico-1">
+                        <img src="img/kol_only_by_the_night.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">Kings of Leon</h1>
+                                <h2 class="text-gray text-xs">Only By The Night</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="historico-2">
+                        <img src="img/rhcp_californication.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">Red Hot Chili Peppers</h1>
+                                <h2 class="text-gray text-xs">Californications</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="historico-3">
+                        <img src="img/radiohead_in_rainbows.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">Radiohead</h1>
+                                <h2 class="text-gray text-xs">In Rainbows</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="historico-4">
+                        <img src="img/slptkn_take_me_back_to_eden.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">Sleep Token</h1>
+                                <h2 class="text-gray text-xs">Take Me Back To Eden</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="historico-5">
+                        <img src="img/beatles_rubber_soul.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">The Beatles</h1>
+                                <h2 class="text-gray text-xs">Rubber Soul</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:w-11/12 xl:h-1/4 w-full flex flex-col">
+                <div><h1 class="text-white text-base xl:text-xl"> <i class="fa-solid fa-compact-disc"></i> Lançamentos</h1></div>
+                <div class="flex flex-row justify-evenly w-full">
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="lancamento-1">
+                        <img src="img/ghost_tfiafl.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">Ghost</h1>
+                                <h2 class="text-gray text-xs">The Future is A Foreign Land</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="lancamento-2">
+                        <img src="img/bvb_bleeders.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">Black Veil Brides</h1>
+                                <h2 class="text-gray text-xs">Bleeders</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="lancamento-3">
+                        <img src="img/bmth_post_human_nex_gen.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">Bring Me The Horizon</h1>
+                                <h2 class="text-gray text-xs">POST HUMAN:NeX GEn</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="lancamento-4">
+                        <img src="img/21p_clancy.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">Twenty One Pilots</h1>
+                                <h2 class="text-gray text-xs">Clancy</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="lancamento-5">
+                        <img src="img/kol_can_we_please_have_fun.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">Kings of Leon</h1>
+                                <h2 class="text-gray text-xs">Can We Please Have Fun</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:w-11/12 xl:h-1/4 w-full flex flex-col">
+                <div><h1 class="text-white text-base xl:text-xl"> <i class="fa-solid fa-star"></i> O melhor de cada artista</h1></div>
+                <div class="flex flex-row justify-evenly w-full">
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="thisis-1">
+                        <img src="img/ti_david_bowie.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">This is David Bowie</h1>
+                                <h2 class="text-gray text-xs">Todos os maiores hits aqui!</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="thisis-2">
+                        <img src="img/ti_bad_omens.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">This is Bad Omens</h1>
+                                <h2 class="text-gray text-xs">Todos os maiores hits aqui!</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="thisis-3">
+                        <img src="img/ti_ghost.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">This is Ghost</h1>
+                                <h2 class="text-gray text-xs">Todos os maiores hits aqui!</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="thisis-4">
+                        <img src="img/ti_sleep_token.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">This is Sleep Token</h1>
+                                <h2 class="text-gray text-xs">Todos os maiores hits aqui!</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="ease-in duration-300 xl:w-auto xl:h-32 h-12 flex flex-row items-center xl:hover:bg-background-2 xl:hover:rounded-lg" id="thisis-5">
+                        <img src="img/ti_nirvana.jpg" alt="" class="cursor-pointer ease-in duration-300 xl:w-32 xl:h-32 w-12 h-12 rounded-lg shadow-lg shadow-background-1">
+                        <div class="ease-in duration-300 h-full xl:flex flex-col justify-between items-end w-0 truncate m-2 hidden" id="descricao">
+                            <div class="flex flex-col w-full items-start">
+                                <h1 class="text-white text-base">This is Nirvana</h1>
+                                <h2 class="text-gray text-xs">Todos os maiores hits aqui!</h2>
+                            </div>
+                            <button class="ease-in duration-300 bg-green 2xl:w-8 2xl:h-8 xl:w-6 xl:h-6 xl:text-xs rounded-full text-background-1 mb-1"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>
